@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-0 p-0 box-border bg-slate-900">
+    <div id="wrapper" class="text-white w-2/5 mx-auto">
+        <div class="w-full border border-red-200 p-6 bg-gray-700 mt-4 rounded-md flex flex-col">
+            <h2 class="text-4xl font-semibold text-blue-500 mb-2">{{ name }}</h2>
+            <p class="mt-2 text-slate-100">Dojo Location: {{ dojo_location }}</p>
+            <p class="mt-2 text-slate-100">Favorite Language: {{ language }}</p>
+            <p class="mt-2 text-slate-100">Comments: {{ comments }}</p>
+            <p class="mt-2 text-slate-100">Best TA: {{ best_ta }}</p>
+            <p class="mt-2 text-slate-100">Current Skills: {{ python }} │ {{ flask }} │ {{ mysql }}</p>
+            <a href="/" class="mt-4 pt-4 border-t-[1px] border-slate-800 text-blue-600 underline font-semibold">Home</a>
+        </div>
+    </div>
+</body>
+</html>

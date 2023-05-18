@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="m-0 p-0 box-border bg-slate-900">
+    <div id="wrapper" class="text-white w-2/5 mx-auto">
+        <form action="/process" method="POST" class="w-full border border-red-200 p-6 bg-gray-700 mt-4 rounded-md">
+            <h1 class="text-2xl pb-3 mb-2 font-semibold">
+                Dojo Survey
+            </h1>
+            <div>
+                <div class="flex flex-col mb-3">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="px-3 py-2 bg-gray-800 border border-gray-900">
+                </div>
+                <div class="flex flex-col mb-3">
+                    <label for="dojo_location">Dojo Location:</label>
+                    <select name="dojo_location" id="dojo_location" class="px-3 py-2 bg-gray-800 border border-gray-900">
+                        <option value="San_jose">San Jose</option>
+                        <option value="Seattle">Seattle</option>
+                        <option value="Neverland">Neverland</option>
+                    </select>
+                </div>
+                <div class="flex flex-col mb-3">
+                    <label for="language">Favorite Language:</label>
+                    <select name="language" id="language" class="px-3 py-2 bg-gray-800 border border-gray-900">
+                        <option value="Python">Python</option>
+                        <option value="Javascript">Javascript</option>
+                        <option value="Klingon">Klingon </option>
+                    </select>
+                </div>
+                <div class="flex flex-col mb-3">
+                    <label for="comments">Comments:</label>
+                    <textarea name="comments" id="comments" rows="4" class="px-3 py-2 bg-gray-800 border border-gray-900"></textarea>
+                </div>
+                
+                <h2>Best TA:</h2>
+                <div class="radio_wrapper flex justify-around mt-2 mb-4">
+                    
+                    <div class="flex items-center pl-4 border border-gray-200 rounded w-1/5">
+                        <input checked type="radio" value="Brendan" name="best_ta" id="Brendan" class="w-4 h-4 text-blue-600 bg-gray-800 border-gray-300 ">
+                        <label for="Brendan" class="w-full py-4 ml-2 text-sm font-medium">Brendan</label>
+                    </div>
+                    
+                    <div class="flex items-center pl-4 border border-gray-200 rounded w-1/5">
+                        <input type="radio" value="Jon" id="Jon" name="best_ta" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300">
+                        <label for="Jon" class="w-full py-4 ml-2 text-sm font-medium ">Jon</label>
+                    </div>
+
+                    <div class="flex items-center pl-4 border border-gray-200 rounded w-1/5">
+                        <input type="radio" value="Christina" name="best_ta" id="Christina" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300">
+                        <label for="Christina" class="w-full py-4 ml-2 text-sm font-medium ">Christina</label>
+                    </div>
+
+                    <div class="flex items-center pl-4 border border-gray-200 rounded w-1/5">
+                        <input type="radio" value="Samuel" name="best_ta" id="Samuel" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300">
+                        <label for="Samuel" class="w-full py-4 ml-2 text-sm font-medium ">Samuel</label>
+                    </div>
+                </div>
+
+                <h3 class="mb-2">Skilled In:</h3>                
+                <div class="flex mb-4">
+                    <div class="flex items-center mr-4">
+                        <input id="Python" type="checkbox" value="Python" name="skills" class="w-4 h-4 bg-gray-100 border-gray-300 rounded">
+                        <label for="Python" class="ml-2 text-sm">Python</label>
+                    </div>
+                    <div class="flex items-center mr-4">
+                        <input id="Flask" name="skills" type="checkbox" value="Flask" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                        <label for="Flask" class="ml-2 text-sm">Flask</label>
+                    </div>
+                    <div class="flex items-center mr-4">
+                        <input id="MySQL" name="skills" type="checkbox" value="MySQL" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded">
+                        <label for="MySQL" class="ml-2 text-sm">MySQL</label>
+                    </div>
+                </div>
+
+
+                <button type="submit" class="w-full bg-gray-900 border border-red-200 px-4 py-2 transition duration-50 focus:outline-none font-semibold hover:bg-red-500 hover:text-white text-xl cursor-pointer mt-4">
+                Send
+                </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
